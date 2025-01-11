@@ -22,15 +22,7 @@ return {
 				typescript = formatters.prettierd,
 				typescriptreact = formatters.prettierd,
 				yaml = formatters.lsp,
-				go = {
-					formatters.shell({
-						cmd = { "goimports-reviser", "-rm-unused", "-set-alias", "-format", "%" },
-						tempfile = function()
-							return vim.fn.expand("%") .. ".formatter-temp"
-						end,
-					}),
-					formatters.shell({ cmd = { "gofmt" } }),
-				},
+				go = formatters.lsp,
 			},
 		})
 	end,
