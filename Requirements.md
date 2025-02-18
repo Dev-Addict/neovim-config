@@ -12,7 +12,5 @@
 
 ## Environment Variables
 
-- Avante(one of):
-  - ANTHROPIC_API_KEY
+- ChatGPT.nvim:
   - OPENAI_API_KEY
-  - AZURE_OPENAI_API_KEY
