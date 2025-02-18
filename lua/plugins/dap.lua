@@ -8,10 +8,8 @@ return {
 		},
 		config = function()
 			local dap, dapui = require("dap"), require("dapui")
-			local dapgo = require("dapgo")
 
 			dapui.setup()
-			dapgo.setup()
 
 			dap.listeners.before.attach.dapui_config = function()
 				dapui.open()
@@ -27,8 +25,8 @@ return {
 				dapui.close()
 			end
 
-      vim.fn.sign_define('DapBreakpoint',{ text ='🟥', texthl ='', linehl ='', numhl =''})
-vim.fn.sign_define('DapStopped',{ text ='▶️', texthl ='', linehl ='', numhl =''})
+			vim.fn.sign_define("DapBreakpoint", { text = "🟥", texthl = "", linehl = "", numhl = "" })
+			vim.fn.sign_define("DapStopped", { text = "▶️", texthl = "", linehl = "", numhl = "" })
 
 			vim.keymap.set("n", "<F5>", function()
 				require("dap").continue()
@@ -42,7 +40,7 @@ vim.fn.sign_define('DapStopped',{ text ='▶️', texthl ='', linehl ='', numhl 
 			vim.keymap.set("n", "<F12>", function()
 				require("dap").step_out()
 			end, {})
-      vim.keymap.set('n', '<leader>b', require 'dap'.toggle_breakpoint)
+			vim.keymap.set("n", "<leader>b", require("dap").toggle_breakpoint)
 
 			vim.keymap.set("n", "<Leader>lp", function()
 				require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
