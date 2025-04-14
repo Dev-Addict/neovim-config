@@ -30,7 +30,6 @@ return {
 					"yamlls",
 					"csharp_ls",
 					"kotlin_language_server",
-          "rust_analyzer"
 				},
 			})
 		end,
@@ -64,7 +63,6 @@ return {
 			lspconfig.csharp_ls.setup(opts)
 			lspconfig.jdtls.setup(opts)
 			lspconfig.kotlin_language_server.setup(opts)
-      lspconfig.rust_analyzer.setup(opts)
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
@@ -111,7 +109,7 @@ return {
 					"sqlfluff",
 					"stylua",
 					"ktlint",
-          "codelldb",
+					"codelldb",
 				},
 			})
 		end,
