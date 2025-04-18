@@ -9,7 +9,7 @@ return {
         null_ls.builtins.code_actions.refactoring,
         null_ls.builtins.diagnostics.checkmake,
         null_ls.builtins.diagnostics.checkstyle.with({
-          extra_args = {"-c", "/google_checks.xml"}
+          extra_args = { "-c", "/google_checks.xml" },
         }),
         null_ls.builtins.diagnostics.codespell,
         null_ls.builtins.diagnostics.dotenv_linter,

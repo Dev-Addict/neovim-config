@@ -9,6 +9,7 @@
 - [Delta](https://github.com/dandavison/delta)
 - [Sad](https://github.com/ms-jpq/sad)
 - [fd](https://github.com/sharkdp/fd)
+- [prettierd](https://github.com/fsouza/prettierd)
 
 ## Environment Variables
 
