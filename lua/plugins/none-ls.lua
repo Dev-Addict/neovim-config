@@ -11,7 +11,6 @@ return {
         null_ls.builtins.diagnostics.checkstyle.with({
           extra_args = { "-c", "/google_checks.xml" },
         }),
-        null_ls.builtins.diagnostics.codespell,
         null_ls.builtins.diagnostics.dotenv_linter,
         require("none-ls.diagnostics.eslint_d"),
         null_ls.builtins.diagnostics.golangci_lint,
