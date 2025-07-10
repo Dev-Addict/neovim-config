@@ -65,6 +65,7 @@ return {
         "xml",
         "yaml",
         "zig",
+        "qmljs",
       },
       highlight = { enable = true },
       indent = { enable = true },

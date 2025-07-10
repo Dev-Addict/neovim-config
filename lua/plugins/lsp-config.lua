@@ -20,6 +20,7 @@ return {
           "gopls",
           "graphql",
           "html",
+          "hyprls",
           "jdtls",
           "jsonls",
           "lua_ls",
@@ -53,6 +54,7 @@ return {
       lspconfig.gopls.setup(opts)
       lspconfig.graphql.setup(opts)
       lspconfig.html.setup(opts)
+      lspconfig.hyprls.setup(opts)
       lspconfig.jsonls.setup(opts)
       lspconfig.lua_ls.setup(opts)
       lspconfig.markdown_oxide.setup(opts)
@@ -63,6 +65,10 @@ return {
       lspconfig.csharp_ls.setup(opts)
       lspconfig.jdtls.setup(opts)
       lspconfig.kotlin_language_server.setup(opts)
+      lspconfig.qmlls.setup({
+        capabilities = capabilities,
+        cmd = { "qmlls6", "-E" },
+      })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
