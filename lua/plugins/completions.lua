@@ -1,8 +1,5 @@
 return {
 	{
-		"hrsh7th/cmp-nvim-lsp",
-	},
-	{
 		"L3MON4D3/LuaSnip",
 		dependencies = {
 			"saadparwaiz1/cmp_luasnip",
@@ -11,10 +8,16 @@ return {
 	},
 	{
 		"hrsh7th/nvim-cmp",
+		dependencies = {
+			"lukas-reineke/cmp-under-comparator",
+			"hrsh7th/cmp-nvim-lsp",
+			"onsails/lspkind.nvim",
+		},
 		config = function()
 			require("luasnip.loaders.from_vscode").lazy_load()
 
 			local cmp = require("cmp")
+			local lspkind = require("lspkind")
 
 			cmp.setup({
 				snippet = {
@@ -44,19 +47,38 @@ return {
 					},
 				}),
 				formatting = {
-					format = function(entry, vim_item)
-						local highlights_info = require("colorful-menu").cmp_highlights(entry)
+					format = lspkind.cmp_format({
+						mode = "symbol",
+						maxwidth = {
+							menu = 50,
+							abbr = 50,
+						},
+						ellipsis_char = "...",
+						show_labelDetails = true,
+						before = function(entry, vim_item)
+							local highlights_info = require("colorful-menu").cmp_highlights(entry)
 
-						-- highlight_info is nil means we are missing the ts parser, it's
-						-- better to fallback to use default `vim_item.abbr`. What this plugin
-						-- offers is two fields: `vim_item.abbr_hl_group` and `vim_item.abbr`.
-						if highlights_info ~= nil then
-							vim_item.abbr_hl_group = highlights_info.highlights
-							vim_item.abbr = highlights_info.text
-						end
+							if highlights_info ~= nil then
+								vim_item.abbr_hl_group = highlights_info.highlights
+								vim_item.abbr = highlights_info.text
+							end
 
-						return vim_item
-					end,
+							return vim_item
+						end,
+					}),
+				},
+				sorting = {
+					priority_weight = 2,
+					comparators = {
+						cmp.config.compare.offset,
+						cmp.config.compare.exact,
+						cmp.config.compare.score,
+						require("cmp-under-comparator").under,
+						cmp.config.compare.kind,
+						cmp.config.compare.sort_text,
+						cmp.config.compare.length,
+						cmp.config.compare.order,
+					},
 				},
 			})
 		end,
