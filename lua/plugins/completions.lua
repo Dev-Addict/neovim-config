@@ -63,7 +63,7 @@ return {
 								vim_item.abbr = highlights_info.text
 							end
 
-							return vim_item
+							return require("tailwind-tools.cmp").lspkind_format(entry, vim_item)
 						end,
 					}),
 				},

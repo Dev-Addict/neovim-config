@@ -49,6 +49,8 @@
 - (`n`, `<leader>rn`): Rename
 - (`n|v`, `<leader>ca`): Open code actions
 - (`n`, `<leader>f`): Format
+- (`n`, `[r`): Previous reference
+- (`n`, `]r`): Next reference
 
 ### Calls Window
 
@@ -89,3 +91,26 @@
 - `o`: Toggle or jump
 - `q`: Quit
 - `e`: Jump
+
+## TypeScript Special Support
+
+- (`n`, `<leader>to`): Open the quickfix list
+- (`n`, `<leader>tc`): Close the quickfix list
+
+## Go Speical Support
+
+- (`n`, `<leader>ge`): Insert `if err != nil {}`
+
+## Markdown Special Support
+
+- (`n`, `<leader>mp`): Open markdown preview
+- (`n`, `<leader>mc`): Close markdown preview
+- (`n`, `<A-t>`): Insert a new table
+- (`n`, `<A-S-t>`): Insert a new table(not surrounded by pipes)
+- (`n`, `<S-TAB>`): Previous cell
+- (`n`, `<TAB>`): Next cell
+- (`n`, `<A-k>`): Insert row up
+- (`n`, `<A-j>`): Insert row down
+- (`n`, `<A-h>`): Insert column left
+- (`n`, `<A-l>`): Insert column right
+- (`n`, `<A-d>`): Delete column
