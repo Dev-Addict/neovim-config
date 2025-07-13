@@ -114,3 +114,16 @@
 - (`n`, `<A-h>`): Insert column left
 - (`n`, `<A-l>`): Insert column right
 - (`n`, `<A-d>`): Delete column
+
+## Debug
+
+- (`n`, `<F5>`): Continue
+- (`n`, `<F10>`): Step over
+- (`n`, `<F11>`): Step into
+- (`n`, `<F12>`): Step out
+- (`n`, `<leader>b`): Toggle breakpoitn
+- (`n`, `<leader>lp`): Set log print message
+- (`n`, `<leader>dr`): Open repl
+- (`n`, `<leader>dl`): Run last
+- (`n`, `<leader>w`): Open DAP ui
+- (`n`, `<leader>W`): Close DAP ui

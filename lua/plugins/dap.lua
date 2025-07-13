@@ -25,7 +25,16 @@ return {
 				dapui.close()
 			end
 
-			vim.fn.sign_define("DapBreakpoint", { text = "🟥", texthl = "", linehl = "", numhl = "" })
+			local red = vim.g.terminal_color_1
+
+			vim.api.nvim_set_hl(0, "DapBreakpointColor", { fg = red })
+
+			vim.fn.sign_define("DapBreakpoint", {
+				text = "",
+				texthl = "DapBreakpointColor",
+				linehl = "",
+				numhl = "DapBreakpointColor",
+			})
 			vim.fn.sign_define("DapStopped", { text = "▶️", texthl = "", linehl = "", numhl = "" })
 
 			vim.keymap.set("n", "<F5>", function()
