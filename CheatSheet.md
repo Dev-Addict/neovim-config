@@ -131,3 +131,8 @@
 ## Media
 
 - (`n`, `<leader>p`): Paste image
+
+## Cursorline
+
+- (`n`, `<A-p>`): Move to previous reference
+- (`n`, `<A-n>`): Move to next reference
