@@ -127,3 +127,7 @@
 - (`n`, `<leader>dl`): Run last
 - (`n`, `<leader>w`): Open DAP ui
 - (`n`, `<leader>W`): Close DAP ui
+
+## Media
+
+- (`n`, `<leader>p`): Paste image
