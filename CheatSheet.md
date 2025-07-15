@@ -145,3 +145,9 @@
 ## Projects
 
 - (`n`, `<leader>fp`): Open workspaces
+
+## Searching & Replacing
+
+- (`n`, `<leader>S`): Toggle Spectre
+- (`n`, `<leader>sw`): Search current word
+- (`n`, `<leader>sp`): Search on current file
