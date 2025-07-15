@@ -141,3 +141,7 @@
 
 - (`n`, `<leader>oo`): Toggle minimap
 - (`n`, `<leader>of`): Toggle focuse
+
+## Projects
+
+- (`n`, `<leader>fp`): Open workspaces
