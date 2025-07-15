@@ -151,3 +151,10 @@
 - (`n`, `<leader>S`): Toggle Spectre
 - (`n`, `<leader>sw`): Search current word
 - (`n`, `<leader>sp`): Search on current file
+
+### Telescope
+
+- (`n`, `<leader>ff`): Find files
+- (`n`, `<leader>fg`): Live grep
+- (`n`, `<leader>fb`): Find buffers
+- (`n`, `<leader>fh`): Help tags

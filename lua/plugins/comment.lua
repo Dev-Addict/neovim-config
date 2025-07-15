@@ -13,4 +13,9 @@ return {
       vim.api.nvim_set_keymap("n", "gn", ":lua require('neogen').generate()<CR>", opts)
     end,
   },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+  },
 }
